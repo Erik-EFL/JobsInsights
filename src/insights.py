@@ -1,5 +1,6 @@
 from src.jobs import read
 
+
 def get_unique_job_types(path):
     get_all_jobs = read(path)
     job_types = set()
@@ -17,6 +18,7 @@ def filter_by_job_type(jobs, job_type):
         if job["job_type"] == job_type:
             filter_jobs.append(job)
     return filter_jobs
+
 
 def get_unique_industries(path):
     get_all_jobs = read(path)
@@ -67,7 +69,6 @@ def matches_salary_range(job, salary):
         raise ValueError
 
     return job["min_salary"] <= salary <= job["max_salary"]
-
 
 
 def filter_by_salary_range(jobs, salary):
