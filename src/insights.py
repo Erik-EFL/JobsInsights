@@ -68,20 +68,6 @@ def matches_salary_range(job, salary):
 
     return job["min_salary"] <= salary <= job["max_salary"]
 
-    Returns
-    -------
-    bool
-        True if the salary is in the salary range of the job, False otherwise
-
-    Raises
-    ------
-    ValueError
-        If `job["min_salary"]` or `job["max_salary"]` doesn't exists
-        If `job["min_salary"]` or `job["max_salary"]` aren't valid integers
-        If `job["min_salary"]` is greather than `job["max_salary"]`
-        If `salary` isn't a valid integer
-    """
-    pass
 
 
 def filter_by_salary_range(jobs, salary):
